@@ -53,7 +53,7 @@ class supervisord::config inherits supervisord {
       owner  => 'root',
       group  => '0',
       mode   => $supervisord::config_file_mode,
-      notify => Class['supervisord::service']
+      #notify => Class['supervisord::service']
     }
 
     if $supervisord::unix_socket {
